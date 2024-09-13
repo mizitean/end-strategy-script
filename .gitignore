@@ -1,0 +1,60 @@
+# Python Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+.venv/
+env/
+venv/
+
+# IDE Settings (e.g., VSCode, PyCharm)
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Environment Variables
+.env
+
+# macOS
+.DS_Store
+
+# Python Test Cache
+.pytest_cache/
+.tox/
+.nox/
+
+# Coverage Reports
+.coverage
+*.cover
+*.py,cover
+htmlcov/
+coverage.xml
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints
+
+# Mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# pytest
+.pytest_cache/
+
+# Other
+*.db
+*.sqlite3
+*.lock
+*.bak
+*.orig
+
+# Generated Files
+dist/
+build/
+site/
+*.egg-info/
