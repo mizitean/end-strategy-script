@@ -123,7 +123,6 @@ def monitor_ticker_for_instance_setting(setting: ExchangeStrategyResponse ) -> N
             print(f"Current price of {setting.ticker} for {setting.api_object.name}: {price}")
             
             if price >= setting.start_sell_at:
-                print(f"{setting.api_object.name} sold {setting.ticker} for {price}")
 
                 new_amount = setting.state_object.current_amount - setting.amount_to_sell
                 new_fiat = setting.state_object.current_fiat + Decimal((setting.amount_to_sell * price))
@@ -132,6 +131,9 @@ def monitor_ticker_for_instance_setting(setting: ExchangeStrategyResponse ) -> N
                 update_strategy_state(setting.state_object.id, data)
 
                 setting.amount_to_sell -= 1  
+
+                print(f"{setting.api_object.name} sold {setting.ticker} for {price}, wants to sell {setting.amount_to_sell} more of this asset.")
+
 
             else:
                 print(f"{setting.api_object.name} did not sold {setting.ticker} for {price}")
